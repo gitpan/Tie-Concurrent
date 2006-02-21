@@ -4,7 +4,7 @@ use strict;
 use vars qw($VERSION);
 use Carp;
 use POSIX qw(:errno_h);
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 sub DEBUG () {0}
 
