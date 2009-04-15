@@ -4,7 +4,7 @@ use strict;
 use vars qw($VERSION);
 use Carp;
 use POSIX qw(:errno_h);
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 sub DEBUG () {0}
 
@@ -148,7 +148,7 @@ Tie::Concurrent - Paranoid tie for concurrent access
 
 =head1 DESCRIPTION
 
-Modules like GDBM_File is fraught when you have potentialy many
+Modules like GDBM_File are fraught when you have potentialy many
 readers/writers (like say in a long running forking daemon).  While they
 might handle file locking properly, if any program holds the lock for too
 long, others will not be able to write to the file.
@@ -199,7 +199,7 @@ Array ref that is used to tie the underlying hash when writing is needed.
 
 =head1 NOTES
 
-Please note that there are many problems with this approche.  For instance,
+Please note that there are many problems with this aproach.  For instance,
 in the above example, another process might have created $cache{$key} while
 we did our search and those values would be lost.
 
@@ -222,7 +222,17 @@ MLDBM::DELETE is broken.  It does not return the deleted value.
 
 =head1 AUTHOR
 
-Philip Gwyn, perl@pied.nu
+Philip Gwyn, E<lt>gwyn-at-cpan.orgE<gt>
+
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2009 by Philip Gwyn
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
+
 
 =head1 SEE ALSO
 

@@ -2,5 +2,9 @@ Changes
 Concurrent.pm
 MANIFEST
 Makefile.PL
-test.pl
-torture.pl
+README
+eg/torture.pl
+t/01_pod.t
+t/02_pod_coverage.t
+t/10_main.t
+META.yml                                 Module meta-data (added by MakeMaker)
